@@ -1,5 +1,6 @@
 "use strict";
 
+
 // First part of Homework
 
 let number1 = 24;
