@@ -75,3 +75,5 @@ function calculateProduct(arr) {
 
 productOfArray = calculateProduct(resultsArray);
 console.log(productOfArray);
+
+
