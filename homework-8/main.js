@@ -60,7 +60,7 @@ updateButton.addEventListener('click', () => {
     if (hatredLevelLabel.textContent) {
         setTimeout(() => {
        document.body.style.background = 'red';
-        }, 2000);
+        }, 1000);
     } else {
         alert('Please select a level first.');
     }
