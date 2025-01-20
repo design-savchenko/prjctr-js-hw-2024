@@ -2,24 +2,38 @@
 
 //First part homework
 
-function durationBetweenDates(startDate = '01 Jan 2000',
-                              endDate = '02 Jan 2000',
+function durationBetweenDates(startDate = '2000-01-01',
+                              endDate = '2000-01-02',
                               unit = 'days') {
 
     const start = new Date(startDate);
     const end = new Date(endDate);
 
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+        return 'Не вірно ведені параметри!';
+    }
+
     const difference = Math.abs(end - start);
 
     let multiplier;
-    if (unit === 'seconds') multiplier = 1000;
-    else if (unit === 'minutes') multiplier = 1000 * 60;
-    else if (unit === 'hours') multiplier = 1000 * 60 * 60;
-    else multiplier = 1000 * 60 * 60 * 24;
+    if (unit === 'seconds') {
+        multiplier = 1000;
+    }
+    else if (unit === 'minutes') {
+        multiplier = 1000 * 60;
+    }
+    else if (unit === 'hours') {
+        multiplier = 1000 * 60 * 60;
+    }
+    else {
+        multiplier = 1000 * 60 * 60 * 24;
+    }
 
     const result = Math.floor(difference / multiplier);
 
     return `${result} ${unit}`;
+
+
 }
 
 console.log(durationBetweenDates('02 Aug 1985', '03 Aug 1985', 'seconds'));
