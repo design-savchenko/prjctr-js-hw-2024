@@ -3,12 +3,15 @@
 //First part homework
 
 function addThemAll(...numbers) {
-    let summ = 0;
+    let sum = 0;
 
     for (let num of numbers) {
-        summ += num;
+        if (typeof num !== 'number') {
+            return 'Введіть число!';
+        }
+        sum += num;
     }
-    return summ;
+    return sum;
 }
 
 console.log(addThemAll(2,4));
@@ -35,12 +38,18 @@ console.log(multiply(4)(3))
 
 function byProperty(property, direction) {
     return function (a, b) {
+
+
+        if (!(a.hasOwnProperty(property) && b.hasOwnProperty(property))) {
+            throw new Error('Неправильно значення!');
+        }
+
         if (direction === '>') {
             return a[property] > b[property] ? 1 : a[property] < b[property] ? -1 : 0;
         } else if (direction === '<') {
             return a[property] < b[property] ? 1 : a[property] > b[property] ? -1 : 0;
         } else {
-            throw new Error();
+            throw new Error('Не працює сортування!');
         }
     };
 }
@@ -72,9 +81,15 @@ const movies = [
     },
 ];
 
-console.log(movies.sort(byProperty('releaseYear', '>')));
-console.log(movies.sort(byProperty('runningTimeInMinutes', '<')));
-console.log(movies.sort(byProperty('movieName', '>')));
+try {
+    console.log(movies.sort(byProperty('releaseYear', '>')));
+    console.log(movies.sort(byProperty('runningTimeInMinutes', '<')));
+    console.log(movies.sort(byProperty('movieName', '>')));
+} catch (error) {
+    console.log(error);
+}
+
+
 
 
 // Fourth part homework
