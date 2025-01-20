@@ -18,9 +18,13 @@ function detonatorTimer(delay) {
 
 detonatorTimer(3);
 
-//Second part homework
+Second part homework
 
 function detonatorTimerSec(delay) {
+    if (typeof delay !== 'number' || delay < 0) {
+        console.log('Введіть число');
+        return;
+    }
     function countDown(currentTimeSet) {
         if (currentTimeSet > 0) {
             console.log(currentTimeSet);
@@ -49,7 +53,7 @@ let me = {
             `Hi, I'm ${this.name} from ${this.residency}. I'm a ${this.profession} with ${this.experience} years of expirience.`
         );
     },
-    shreSkills() {
+    shareSkills() {
         console.log(
             `I speak ${this.language.join(", ")} and my favorite tool for work is ${
                 this.favoriteTool
@@ -67,7 +71,7 @@ let me = {
 };
 
 me.introduce();
-me.shreSkills();
+me.shareSkills();
 me.currentFocus();
 me.futurePlans();
 
@@ -84,7 +88,7 @@ let aboutMe = {
     currentProject: "Design Web Site for my company",
     introduce() {
         console.log(
-            `Hi, I'm ${this.name} from ${this.residency}. I'm a ${this.profession} with ${this.experience} years of expirience.`
+            `Hi, I'm ${this.name} from ${this.residency}. I'm a ${this.profession} with ${this.experience} years of experience.`
         );
     },
     shareSkills() {
@@ -118,11 +122,18 @@ setTimeout(securedSelfFuturePlans, 4000);
 // //Fifth part homework
 
 function decorFunction(a, b) {
+
     console.log(`The sum of ${a} and ${b} is ${a + b}`);
 }
 
 function slower(func, seconds) {
     return function (...args) {
+        args.forEach(arg => {
+            if (typeof arg !== 'number') {
+                throw new Error('Введіть число!');
+            }
+
+        })
         console.log(`Chill out, you will get your result in ${seconds} seconds...`);
         setTimeout(() => {
             func(...args);
@@ -132,4 +143,9 @@ function slower(func, seconds) {
 
 let slowedDecorFunction = slower(decorFunction, 5);
 
+try {
+
 slowedDecorFunction(3, 7);
+} catch (error) {
+    console.log(error);
+}
