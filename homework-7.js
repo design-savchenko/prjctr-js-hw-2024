@@ -18,7 +18,7 @@ function detonatorTimer(delay) {
 
 detonatorTimer(3);
 
-Second part homework
+//Second part homework
 
 function detonatorTimerSec(delay) {
     if (typeof delay !== 'number' || delay < 0) {
