@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+}
+
+body {
+  display: flex;
+  margin-top: 60px;
+  align-items: flex-start;
+  font-family: "Oswald", serif;
+  background-color: #f6f6f6;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Oswald", serif;
+  text-transform: uppercase;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+button i {
+  font-size: 1.25rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  min-width: 650px;
+  border-radius: 24px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.m-top {
+  margin-top: 24px;
+}
+
+h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.create-task-form .task-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+label {
+  width: 100%;
+}
+
+.create-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-field {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-chages {
+  gap: 12px;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  padding: 13px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border: 1px solid rgb(188, 188, 188);
+  border-radius: 10px;
+  font-family: "Oswald", serif;
+}
+
+input::placeholder {
+  color: #cbcbcb;
+  text-transform: uppercase;
+}
+
+ul {
+  margin-top: 24px;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #b5b5b5;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+li span {
+  width: 340px;
+  color: #000000;
+  font-weight: 4000;
+  font-size: 1.25rem;
+}
+
+.task-wrapp-i {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+#remove-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: red;
+}
+
+button:hover {
+  opacity: 0.8;
+  transition: all 0.4s ease-in-out;
+}
+
+.task-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#edit {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#remove {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.task-btn {
+  position: absolute;
+  right: 8px;
+}
+
+.clear-tasks {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  font-size: 14px;
+  background-color: #ca1515;
+}
+
+.clear-tasks i {
+  font-size: 1rem;
+}
+
+.filter-task-block h5 {
+  background-color: #f6f6f6;
+  border: 1px solid #aeaeae;
+  border-radius: 8px;
+  padding: 4px 24px;
+  white-space: nowrap;
+  font-size: 1.7rem;
+  color: #999999;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.filter-wrapp {
+  background-color: #ffffff;
+  border: 1px solid #c2c2c2;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.list-item {
+  display: flex;
+  gap: 8px;
+}
+
+.list-item i {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 15%;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.list-item i:nth-child(1) {
+  background-color: #979797;
+  opacity: 0.6;
+}
+
+.list-item i:nth-child(2) {
+  background-color: #ff0000;
+  opacity: 0.6;
+}
+
+.list-item i:hover {
+  opacity: 0.8;
+  transition: all 0.4s ease-in-out;
+}
