@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Homework 11 - Персонажі</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="container">
+      <div class="box-main">
+        <div class="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bc/The_Simpsons_Logo.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="character-select">
+          <select id="character" class="select-special">
+            <option value="" disabled selected>Оберіть персонажа</option>
+            <option value="homer">Гомер Сімпсон</option>
+            <option value="bart">Барт Сімпсон</option>
+            <option value="lisa">Ліса Сімпсон</option>
+            <option value="marge">Мардж Сімпсон</option>
+          </select>
+        </div>
+
+        <div id="error-msg" class="error-msg">
+          <i class="bx bx-info-circle"></i>
+          <p>Оберіть персонажа!</p>
+        </div>
+
+        <div class="character-info">
+          <img id="character-img" src="" alt="Персонаж" class="character-img" />
+          <div id="character-intro" class="character-intro"></div>
+        </div>
+
+        <div class="character-special"></div>
+
+        <div class="result-btn">
+          <button id="show-character" class="button-primary">Показати</button>
+          <button id="delete" class="delete">Очистити</button>
+        </div>
+
+        <table class="table-about" id="table-about">
+          <thead>
+            <tr>
+              <th>Ім'я</th>
+              <th>Вік</th>
+              <th>Робота</th>
+              <th>Фраза</th>
+            </tr>
+          </thead>
+          <tbody id="character-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
